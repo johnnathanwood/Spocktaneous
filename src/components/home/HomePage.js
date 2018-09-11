@@ -10,6 +10,11 @@ export default class HomePage extends Component {
         return (
             <React.Fragment>
                 <div className="homeButtons" style={styles}>
+
+                <div className="homeHeader">
+                <h1>Spocktaneous</h1>
+                </div>
+                
                     <div className="loginButton">
                         <button type="button"
                             className="btn btn-success"
