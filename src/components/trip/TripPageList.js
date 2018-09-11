@@ -12,7 +12,7 @@ import React, { Component } from 'react'
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push("/trip")
+                                this.props.history.push("/trip/new")
                             }
                             }>
                             Create New Article

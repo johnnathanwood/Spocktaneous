@@ -8,10 +8,10 @@ export default class TripPageForm extends Component {
 
     // Set initial state
     state = {
-        tripName: "",
-        budget: "",
-        date: "",
-        directions: "",
+        tripId: "",
+        tripBudget: "",
+        tripNumber: "",
+        userId: "",
     }
 
     handleFieldChange = evt => {
@@ -43,21 +43,21 @@ export default class TripPageForm extends Component {
                     <div className="form-group">
                         <section className="tripField">
                             <label htmlFor="tripId"></label>
-                            <label htmlFor="tripBudget">Budget</label>
+                            <select htmlFor="tripBudget">Budget $$</select>
                             <p></p>
-                            <input type="text" required="true"
+                            <select type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="messageTo"
-                                placeholder="Message To"
-                                size="35" />
+                                id="trip-budget"
+                                placeholder="Budget"
+                                size="auto"/>
                         </section>
                     </div>
                     <p></p>
                     <div className="form-group">
                     </div>
                     <div className="form-group">
-                        <section className="tripField">
+                        <section  type="number"className="tripField">
                             <p></p>
                             <label htmlFor="number">How many?</label>
                             <p></p>
