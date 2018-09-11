@@ -17,6 +17,24 @@
       "email": "johnnathanwood@gmail.com",
       "password": "1",
       "id": 3
+    },
+    {
+      "username": "johnwood",
+      "email": "johnnathanwood@gmail.com",
+      "password": "1",
+      "id": 4
+    }
+  ],
+  "trip": [
+    {
+      "id": 1,
+      "budget": "",
+      "number": "test",
+      "userId": 1
+    },
+    {
+      "userId": 3,
+      "id": 2
     }
   ]
 }

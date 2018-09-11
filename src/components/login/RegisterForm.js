@@ -52,7 +52,7 @@ export default class Register extends Component {
             <div className="forms">
                 <div className="registerForm">
                     <form onSubmit={this.handleRegister}>
-                        <h1 className="h3 mb-3 font-weight-normal">Please Create Account</h1>
+                        <h1 className="h3 mb-3 font-weight-normal">Create Spocktaneous Account</h1>
                         <label htmlFor="userName">
                             Username
                         </label>
