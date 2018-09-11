@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "aartkeen",
+      "email": "aartkeen@ut.utm.edu",
+      "password": "asdfasdf",
+      "id": 1
+    },
+    {
+      "username": "johnwood",
+      "email": "Johnisprettycool@aol.com",
+      "password": "1",
+      "id": 2
+    },
+    {
+      "username": "johnwood",
+      "email": "johnnathanwood@gmail.com",
+      "password": "1",
+      "id": 3
+    }
+  ]
+}
