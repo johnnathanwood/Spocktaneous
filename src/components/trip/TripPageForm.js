@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 
-export default class TripPageForm extends Component {
+export default class MessageForm extends Component {
 
-    findTrip = trip => {
-        return this.props.trip.find(trip => trip.id === trip.tripId).tripId
-    }
 
-    // Set initial state
+    //set initial state here
+
+
     state = {
-        tripName: "",
-        budget: "",
-        date: "",
-        directions: "",
+        messageId: "",
+        messageTo: "",
+        message: "",
+        messageDate: ""
     }
 
     handleFieldChange = evt => {
@@ -20,30 +19,31 @@ export default class TripPageForm extends Component {
         this.setState(stateToChange)
     }
 
-    constructTrip = evt => {
+    constructNewMessage = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trip = {
-            id: this.state.tripId,
-            budget: this.state.tripBudget,
-            number: this.state.tripNumber,
+        const messages = {
+            id: this.state.messageId,
+            to: this.state.messageTo,
+            message: this.state.message,
+            date: new Date().toISOString(),
             userId: credentials.id
         }
 
         this.props.addTrip(trip)
-        .then(() => this.props.history.push("/"))
+        .then(() => this.props.history.push("/trip"))
     }
 
     render() {
 
         return (
             <React.Fragment>
-                <h2>Create a Spocktaneous adventure</h2>
-                <form className="tripPageForm">
+                <h2>Message</h2>
+                <form className="messageForm">
                     <div className="form-group">
-                        <section className="tripField">
-                            <label htmlFor="tripId"></label>
-                            <label htmlFor="tripBudget">Budget</label>
+                        <section className="messageField">
+                            <label htmlFor="messageId"></label>
+                            <label htmlFor="messageTo">Message To:</label>
                             <p></p>
                             <input type="text" required="true"
                                 className="form-control"
@@ -57,19 +57,19 @@ export default class TripPageForm extends Component {
                     <div className="form-group">
                     </div>
                     <div className="form-group">
-                        <section className="tripField">
+                        <section className="messageField">
                             <p></p>
-                            <label htmlFor="number">How many?</label>
+                            <label htmlFor="message">Message:</label>
                             <p></p>
                             <textarea
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="trip"
+                                id="message"
                                 placeholder="..." rows="5" cols="70"></textarea>
                         </section>
                     </div>
                     <p></p>
-                    <button type="submit" onClick={this.constructTrip} className="btn btn-primary"></button>
+                    <button type="submit" onClick={this.constructNewMessage} className="btn btn-primary">Send Message</button>
                 </form>
             </React.Fragment>
         )
