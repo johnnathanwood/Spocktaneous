@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import DataManager from '../modules/DataManager'
 import './Login.css'
+import DataManager from "../../modules/DataManager"
 
 
 export default class Login extends Component {
