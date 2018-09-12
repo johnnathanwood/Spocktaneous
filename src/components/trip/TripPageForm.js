@@ -57,9 +57,14 @@ export default class TripPageForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="tripBudget"
                                 placeholder="whats your budget"
-                                size="auto" />
+                                size="auto">
+                                <option value="free" selected>Free</option>
+                                <option value="under50">Under $50</option>
+                                <option value="under100">Under $100</option>
+                                <option value="under200">Under $200</option>
+                            </select>
                                 
-                        </section>
+                            </section>
                     </div>
                     <p></p>
                     <div className="form-group">
@@ -73,7 +78,31 @@ export default class TripPageForm extends Component {
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="location"
-                                placeholder="select location"></select>
+                                placeholder="select location">
+                                <option value="mylocation" selected>My Location</option>
+                                <option value="customlocation">Custom Location</option>
+                            </select>
+                            
+                                
+
+                        </section>
+                    </div>
+                    <div className="form-group">
+                        <section className="dateField">
+                            <p></p>
+                            <label htmlFor="date">What day?</label>
+                            <p></p>
+                            <select
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="date"
+                                placeholder="select date">
+                                <option value="mylocation" selected>My Location</option>
+                                <option value="customlocation">Custom Location</option>
+                            </select>
+                            
+                                
+
                         </section>
                     </div>
                     <p></p>
