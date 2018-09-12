@@ -25,7 +25,7 @@ export default class TripPageForm extends Component {
     constructNewTrip = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trip = {
+        const trips = {
             id: this.state.tripId,
             budget: this.state.tripBudget,
             location: this.state.tripLocation,
@@ -33,7 +33,7 @@ export default class TripPageForm extends Component {
             userId: credentials.id
         }
 
-        this.props.addTrip(trip)
+        this.props.addTrip(trips)
         .then(() => this.props.history.push("/trip"))
     }
     
@@ -57,9 +57,14 @@ export default class TripPageForm extends Component {
                                 onChange={this.handleFieldChange}
                                 id="tripBudget"
                                 placeholder="whats your budget"
-                                size="auto" />
+                                size="auto">
+                                <option value="free" selected>Free</option>
+                                <option value="under50">Under $50</option>
+                                <option value="under100">Under $100</option>
+                                <option value="under200">Under $200</option>
+                            </select>
                                 
-                        </section>
+                            </section>
                     </div>
                     <p></p>
                     <div className="form-group">
@@ -73,7 +78,30 @@ export default class TripPageForm extends Component {
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="location"
-                                placeholder="select location"></select>
+                                placeholder="select location">
+                                <option value="mylocation" selected>My Location</option>
+                            </select>
+                            
+                                
+
+                        </section>
+                    </div>
+                    <div className="form-group">
+                        <section className="dateField">
+                            <p></p>
+                            <label htmlFor="date">What day?</label>
+                            <p></p>
+                            <form
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="date"
+                                placeholder="select date">
+                                <input type="date"></input>
+                                
+                            </form>
+                            
+                                
+
                         </section>
                     </div>
                     <p></p>
