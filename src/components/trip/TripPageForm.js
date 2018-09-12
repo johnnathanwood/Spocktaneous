@@ -25,7 +25,7 @@ export default class TripPageForm extends Component {
     constructNewTrip = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trip = {
+        const trips = {
             id: this.state.tripId,
             budget: this.state.tripBudget,
             location: this.state.tripLocation,
@@ -33,7 +33,7 @@ export default class TripPageForm extends Component {
             userId: credentials.id
         }
 
-        this.props.addTrip(trip)
+        this.props.addTrip(trips)
         .then(() => this.props.history.push("/trip"))
     }
     
@@ -80,7 +80,6 @@ export default class TripPageForm extends Component {
                                 id="location"
                                 placeholder="select location">
                                 <option value="mylocation" selected>My Location</option>
-                                <option value="customlocation">Custom Location</option>
                             </select>
                             
                                 
@@ -92,14 +91,14 @@ export default class TripPageForm extends Component {
                             <p></p>
                             <label htmlFor="date">What day?</label>
                             <p></p>
-                            <select
+                            <form
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="date"
                                 placeholder="select date">
-                                <option value="mylocation" selected>My Location</option>
-                                <option value="customlocation">Custom Location</option>
-                            </select>
+                                <input type="date"></input>
+                                
+                            </form>
                             
                                 
 

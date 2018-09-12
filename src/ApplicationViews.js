@@ -40,8 +40,8 @@ state = {
       user: user
     }))
 
-    addTrip = trip => DataManager.add("trip", trip)
-    .then(() => DataManager.getAll("trip"))
+    addTrip = trip => DataManager.add("trips", trip)
+    .then(() => DataManager.getAll("trips"))
     .then(trip => this.setState({
       trip: trip
     }))
@@ -92,9 +92,10 @@ state = {
              <Route exact path="/trip" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageList {...props}
-              trip={this.state.trip}
+              users={this.state.users}
               editTrip={this.editTrip}
               deleteTrip={this.deleteTrip}
+              trips={this.state.trips} 
               />
           } else {
             return <Redirect to="/login" />
