@@ -29,7 +29,8 @@
     {
       "id": 1,
       "budget": "",
-      "number": "test",
+      "location": "test",
+      "date": [],
       "userId": 1
     },
     {

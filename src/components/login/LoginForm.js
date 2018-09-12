@@ -35,7 +35,7 @@ export default class Login extends Component {
 
             if (users) {
                 localStorage.setItem("credentials", JSON.stringify(users))
-                document.location.href = 'http://localhost:3000/Home'
+                document.location.href = 'http://localhost:3000/trip'
             } else {
                 alert("You need to register")
                 document.location.href = 'http://localhost:3000/register'
