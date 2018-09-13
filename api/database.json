@@ -29,43 +29,21 @@
       "email": "test@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "username": "test",
+      "email": "1@aol.com",
+      "password": "1",
+      "id": 6
     }
   ],
-  "trips": [
+  "trip": [
     {
-      "username": "johnwood",
+      "id": 1,
       "budget": "under $50",
       "location": "my location",
       "date": "",
-      "id": ""
-    },
-    {
-      "id": "EteiuHS",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:00:16.059Z",
       "userId": 3
-    },
-    {
-      "id": "xKn98LC",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:11:52.840Z",
-      "userId": 3
-    },
-    {
-      "id": "dXS8Whz",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:17:36.748Z",
-      "userId": 5
-    },
-    {
-      "id": "z9nuPeE",
-      "budget": "under100",
-      "location": "",
-      "date": "2018-09-12T20:35:17.964Z",
-      "userId": 5
     }
   ]
 }

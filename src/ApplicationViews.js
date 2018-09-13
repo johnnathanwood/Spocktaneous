@@ -6,6 +6,7 @@ import Login from './components/login/LoginForm'
 import Register from './components/login/RegisterForm'
 import TripPageList from './components/trip/TripPageList'
 import TripPageForm from './components/trip/TripPageForm'
+import TripPageEdit from './components/trip/TripPageEdit'
 
 export default class ApplicationViews extends Component {
 
@@ -92,11 +93,8 @@ state = {
              <Route exact path="/trip" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageList {...props}
-              users={this.state.users}
-              editTrip={this.editTrip}
-              deleteTrip={this.deleteTrip}
-              trips={this.state.trips} 
-              />
+            editTrip={this.editTrip}
+            deleteTrip={this.deleteTrip} />
           } else {
             return <Redirect to="/login" />
           }
@@ -108,6 +106,13 @@ state = {
               addTrip={this.addTrip} />
           } else {
             return <Redirect to="/" />
+          }
+        }} />
+        <Route exact path="/trip/edit/:tripId(\d+)" render={(props) => {
+          if (this.isAuthenticated()) {
+            return <TripPageEdit  {...props} editTrip={this.editTrip} trip={this.state.trip} />
+          } else {
+            return <Redirect to="/login" />
           }
         }} />
         {/* <Route exact path="/trip/edit/:tripId(\d+)" render={(props) => {

@@ -1,83 +1,74 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+
 
 class TripPageList extends Component {
-    state = {
-        taskName: "",
-        date: "",
-        details: "",
-        isChecked: false
-    }
 
-    // toggleCheckboxChange = () => {
-    //     const { toggleCheckboxChange, taskid } = this.props;
-
-    //     this.setState(({ isChecked }) => (
-    //         {
-    //             isChecked: true,
-    //         }
-    //     ));
-
-    
-    // toggleCheckboxChange(this.state.id);
-    // }
+  
     render() {
-
+        // console.log(this.props.users.find(user => user.userName === "MessageTest"))
+        // console.log(this.props.users)
+        // console.log(this.props)
         
-        const complete = { isChecked: true }
 
-        return (<React.Fragment>
-            <form className="taskListForm">
-                <div className="taskButton">
+
+
+
+        return (
+            <React.Fragment>
+
+                <div className="tripButton">
                     <button type="button"
                         className="btn btn-success"
-                        onClick={() => 
-                            this.props.history.push("/trip")
-                        
-                        }>
-                        Click to add your trip
-                </button>
-                </div>
-                <div className="checkbox">
-                    <section className="trip">
-                        {
-                            this.props && (trips =>
-                                <div key={trips.id} className="card">
-                                    <div className="card-body">
-                                        <h4 className="card-title">
-                                            {trips.taskName}
-                                        </h4>
-                                        <br></br>
-                                        <h5>{trips.date}</h5>
-                                        <br></br>
-                                        <h6>
-                                            <br></br>
-                                            {trips.detail}
-                                            <br></br>
-
-                                            <Link className="nav-link" to={`/trips/${trips.id}`}>Details</Link>
-                                            <button
-                                                onClick={() => this.props.deleteTask(trips.id)}
-                                                className="card-link btn btn-primary btn-sm">Delete Task</button>
-
-                                        </h6>
-                                    </div>
-                                    <label>
-                                        <button
-                                            onClick={() => this.props.editTask(trips.id, complete)
-                                            }
-                                            className="card-link btn btn-secondary btn-lg btn-block">Complete
-                                         </button>  
-                                          
-                                        {/* {id} */}
-                                    </label>
-                                </div>
-                            )
+                        onClick={() => {
+                            this.props.history.push("/trip/new")
                         }
-                    </section>
+                        }>
+                        Create New Spocktaneous
+                    </button>
                 </div>
-            </form>
-        </React.Fragment>
+
+                <section>
+                    <div>
+                        <h2 className="formHeader">Here are your trips</h2>
+                        <section className="trip">
+                        
+                            {
+                                
+                                this.props && (trip =>
+                                    <div id={`trip--${trip.id}`} key={trip.id} className="tripCard">
+                                        <div id="tripCard-body">
+                                            <h6 className="tripCard-title">
+                                                <section className="formCard">
+                                                    <h6>{trip.budget}</h6>
+                                                    <h6>{trip.location}</h6>
+                                                    <p>{trip.date}</p>
+                                                    console.log(trip,)
+                                                    <button
+                                                    
+                                                        onClick={() => this.props.deleteTrip(trip.id)
+                                                            .then(() => this.props.history.push("/trip"))}
+                                                        className="nav-link-delete"><hover>Delete</hover></button>
+                                                        
+                                                    <button
+                                                        onClick={() => this.props.history.push(`/trip/edit/${trip.id}`)}
+                                                        className="card-link-edit">Edit</button>
+                                                </section>
+
+                                            </h6>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                )}
+                        </section>
+                    </div>
+
+                </section>
+
+            </React.Fragment>
         )
     }
 }
