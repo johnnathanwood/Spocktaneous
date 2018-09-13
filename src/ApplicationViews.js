@@ -99,8 +99,8 @@ state = {
         <Route exact path="/trip/new" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageForm {...props}
-              trip={this.state.trip}
-              addTrip={this.addTrip} />
+              trips={this.state.trip}
+              addTrips={this.addTrip} />
           } else {
             return <Redirect to="/" />
           }

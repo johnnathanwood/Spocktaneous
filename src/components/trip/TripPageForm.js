@@ -21,25 +21,23 @@ export default class TripPageForm extends Component {
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
+    
 
     constructNewTrip = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trip = {
-            id: this.state.tripId,
-            budget: this.state.tripBudget,
-            location: this.state.tripLocation,
+        const trips = {
+            id: this.state.tripsId,
+            budget: this.state.tripsBudget,
+            location: this.state.tripsLocation,
             date: new Date().toISOString(),
             userId: credentials.id
         }
 
-        this.props.addTrip(trip)
+        this.props.addTrip(trips)
         .then(() => this.props.history.push("/trip"))
     }
     
-    
-
-
     render() {
 
         return (

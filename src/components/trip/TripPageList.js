@@ -4,7 +4,7 @@ class TripPageList extends Component{
 
     formatDate = tripDate => {
         let date = new Date (tripDate)
-        var monthNames = [
+        var getMonth= [
           "January", "February", "March",
           "April", "May", "June", "July",
           "August", "September", "October",
@@ -35,17 +35,17 @@ class TripPageList extends Component{
                 //sort by date?
                 // it is easier to sort by server call
 
-                this.props.trip.map(trip =>
-                    <div key={trip.id} className="card">
+                this.props.trip.map(trips =>
+                    <div key={trips.id} className="card">
                         <div className="card-body">
                             <h5 className="card-title">
-                                {this.formatDate(trip.date)}
+                                {this.formatDate(trips.date)}
                                 {/* {event.date} */}
                                     </h5>
                                 <button
-                                    onClick={() => this.props.deleteTrip(trip.id)}
+                                    onClick={() => this.props.deleteTrip(trips.id)}
                                     className="nav-link-quit">No Thankyou</button>
-                            <h4 className="card-tile">{trip.tripName}
+                            <h4 className="card-tile">{trips.tripName}
                                 </h4>
                         </div>
                     </div>
