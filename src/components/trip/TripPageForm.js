@@ -10,10 +10,10 @@ export default class TripPageForm extends Component {
 
 
     state = {
-        tripId: "",
-        tripBudget: "",
-        tripLocation: "",
-        tripDate: ""
+        tripId: 1,
+        tripBudget: [],
+        tripLocation: [],
+        tripDate: []
     }
 
     handleFieldChange = evt => {
@@ -25,7 +25,7 @@ export default class TripPageForm extends Component {
     constructNewTrip = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trips = {
+        const trip = {
             id: this.state.tripId,
             budget: this.state.tripBudget,
             location: this.state.tripLocation,
@@ -33,7 +33,7 @@ export default class TripPageForm extends Component {
             userId: credentials.id
         }
 
-        this.props.addTrip(trips)
+        this.props.addTrip(trip)
         .then(() => this.props.history.push("/trip"))
     }
     

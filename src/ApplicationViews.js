@@ -1,4 +1,4 @@
-import {Route, Redirect} from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
 import DataManager from './modules/DataManager'
 import HomePage from './components/home/HomePage'
@@ -6,6 +6,7 @@ import Login from './components/login/LoginForm'
 import Register from './components/login/RegisterForm'
 import TripPageList from './components/trip/TripPageList'
 import TripPageForm from './components/trip/TripPageForm'
+import TripPageEdit from './components/trip/TripPageEdit'
 
 export default class ApplicationViews extends Component {
 
@@ -14,6 +15,7 @@ export default class ApplicationViews extends Component {
     
 state = {
     users: [],
+    trip: [],
     isLoaded: false
   }
 
@@ -40,8 +42,8 @@ state = {
       user: user
     }))
 
-    addTrip = trip => DataManager.add("trips", trip)
-    .then(() => DataManager.getAll("trips"))
+    addTrip = trip => DataManager.add("trip", trip)
+    .then(() => DataManager.getAll("trip"))
     .then(trip => this.setState({
       trip: trip
     }))
@@ -61,22 +63,16 @@ state = {
     componentDidMount() {
 
         const newState = {}
-        DataManager.getAll("users")
-          .then(allUsers => {
-            newState.users = allUsers
-          }) 
-
         DataManager.getAll("trip")
-           .then(alltrip => {
-            newState.trip = alltrip
-            console.log(alltrip,"hello")
+          .then(alltrip => {
+            newState.users = alltrip
           })
           .then(() => {
             this.setState(newState)
-            console.log(newState)
-            
           })
-        }   
+        }
+    
+          
 
     render() {
         return (
@@ -89,16 +85,15 @@ state = {
                 users={this.state.users} />
             }} />
 
-             <Route exact path="/trip" render={(props) => {
+           <Route exact path="/trip" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageList {...props}
               users={this.state.users}
               editTrip={this.editTrip}
               deleteTrip={this.deleteTrip}
-              trips={this.state.trips} 
-              />
+              trip={this.state.trip} />
           } else {
-            return <Redirect to="/login" />
+            return <Redirect to="/" />
           }
         }} />
         <Route exact path="/trip/new" render={(props) => {
@@ -108,6 +103,13 @@ state = {
               addTrip={this.addTrip} />
           } else {
             return <Redirect to="/" />
+          }
+        }} />
+        <Route exact path="/trip/edit/:tripId(\d+)" render={(props) => {
+          if (this.isAuthenticated()) {
+            return <TripPageEdit  {...props} editTrip={this.editTrip} trip={this.state.trip} />
+          } else {
+            return <Redirect to="/login" />
           }
         }} />
         {/* <Route exact path="/trip/edit/:tripId(\d+)" render={(props) => {

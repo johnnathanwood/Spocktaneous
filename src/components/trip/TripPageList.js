@@ -1,85 +1,60 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
 
-class TripPageList extends Component {
-    state = {
-        taskName: "",
-        date: "",
-        details: "",
-        isChecked: false
-    }
+class TripPageList extends Component{
 
-    // toggleCheckboxChange = () => {
-    //     const { toggleCheckboxChange, taskid } = this.props;
+    formatDate = tripDate => {
+        let date = new Date (tripDate)
+        var monthNames = [
+          "January", "February", "March",
+          "April", "May", "June", "July",
+          "August", "September", "October",
+          "November", "December"
+        ];
 
-    //     this.setState(({ isChecked }) => (
-    //         {
-    //             isChecked: true,
-    //         }
-    //     ));
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
 
-    
-    // toggleCheckboxChange(this.state.id);
-    // }
+        // return day + ' ' + monthNames[monthIndex] + ' ' + year;
+        return monthIndex + '/' +day+ '/'+year;
+      }
+
     render() {
-
-        
-        const complete = { isChecked: true }
-
         return (<React.Fragment>
-            <form className="taskListForm">
-                <div className="taskButton">
-                    <button type="button"
+            <div className="tripButton">
+                <button type="button"
                         className="btn btn-success"
-                        onClick={() => 
-                            this.props.history.push("/trip")
-                        
+                        onClick={() => {
+                            this.props.history.push("/trip/new")}
                         }>
-                        Click to add your trip
+                    test
                 </button>
-                </div>
-                <div className="checkbox">
-                    <section className="trip">
-                        {
-                            this.props && (trips =>
-                                <div key={trips.id} className="card">
-                                    <div className="card-body">
-                                        <h4 className="card-title">
-                                            {trips.taskName}
-                                        </h4>
-                                        <br></br>
-                                        <h5>{trips.date}</h5>
-                                        <br></br>
-                                        <h6>
-                                            <br></br>
-                                            {trips.detail}
-                                            <br></br>
+            </div>
+            <section className="trips">
+            {
+                //sort by date?
+                // it is easier to sort by server call
 
-                                            <Link className="nav-link" to={`/trips/${trips.id}`}>Details</Link>
-                                            <button
-                                                onClick={() => this.props.deleteTask(trips.id)}
-                                                className="card-link btn btn-primary btn-sm">Delete Task</button>
+                this.props.trip.map(trip =>
+                    <div key={trip.id} className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">
+                                {this.formatDate(trip.date)}
+                                {/* {event.date} */}
+                                    </h5>
+                                <button
+                                    onClick={() => this.props.deleteTrip(trip.id)}
+                                    className="nav-link-quit">No Thankyou</button>
+                            <h4 className="card-tile">{trip.tripName}
+                                </h4>
+                        </div>
+                    </div>
+                )
+            }
+            </section>
 
-                                        </h6>
-                                    </div>
-                                    <label>
-                                        <button
-                                            onClick={() => this.props.editTask(trips.id, complete)
-                                            }
-                                            className="card-link btn btn-secondary btn-lg btn-block">Complete
-                                         </button>  
-                                          
-                                        {/* {id} */}
-                                    </label>
-                                </div>
-                            )
-                        }
-                    </section>
-                </div>
-            </form>
-        </React.Fragment>
-        )
-    }
-}
+            </React.Fragment>
+    )
+}}
 
 export default TripPageList;

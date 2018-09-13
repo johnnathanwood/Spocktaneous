@@ -29,43 +29,180 @@
       "email": "test@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "username": "test",
+      "email": "1@aol.com",
+      "password": "1",
+      "id": 6
+    },
+    {
+      "username": "testv1",
+      "email": "1@aol.com",
+      "password": "1",
+      "id": 7
     }
   ],
   "trips": [
     {
-      "username": "johnwood",
-      "budget": "under $50",
-      "location": "my location",
-      "date": "",
-      "id": ""
+      "trip": {
+        "location": {
+          "name": "Nashville 1",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 1,
+      "budget": {
+        "price": "under $50"
+      }
     },
     {
-      "id": "EteiuHS",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:00:16.059Z",
-      "userId": 3
+      "trip": {
+        "location": {
+          "name": "Nashville 2",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 2,
+      "budget": {
+        "price": "under $50"
+      }
     },
     {
-      "id": "xKn98LC",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:11:52.840Z",
-      "userId": 3
+      "trip": {
+        "location": {
+          "name": "Nashville 3",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 3,
+      "budget": {
+        "price": "under $50"
+      }
     },
     {
-      "id": "dXS8Whz",
-      "budget": "",
-      "location": "",
-      "date": "2018-09-12T20:17:36.748Z",
-      "userId": 5
+      "trip": {
+        "location": {
+          "name": "Nashville 4",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 4,
+      "budget": {
+        "price": "under $100"
+      }
     },
     {
-      "id": "z9nuPeE",
-      "budget": "under100",
-      "location": "",
-      "date": "2018-09-12T20:35:17.964Z",
-      "userId": 5
+      "trip": {
+        "location": {
+          "name": "Nashville 5",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 5,
+      "budget": {
+        "price": "under $100"
+      }
+    },
+    {
+      "trip": {
+        "location": {
+          "name": "Nashville 6",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 6,
+      "budget": {
+        "price": "under $200"
+      }
+    },
+    {
+      "trip": {
+        "location": {
+          "name": "Nashville 7",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 7,
+      "budget": {
+        "price": "Free"
+      }
+    },
+    {
+      "trip": {
+        "location": {
+          "name": "Nashville 8",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 8,
+      "budget": {
+        "price": "Free"
+      }
+    },
+    {
+      "trip": {
+        "location": {
+          "name": "Nashville 9",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 9,
+      "budget": {
+        "price": "Free"
+      }
+    },
+    {
+      "trip": {
+        "location": {
+          "name": "Nashville 10",
+          "city": "Nashville",
+          "street": "123 South down st.",
+          "zipecode": "37011",
+          "state": "TN"
+        },
+        "date": ""
+      },
+      "tripId": 10,
+      "budget": {
+        "price": "Free"
+      }
     }
   ]
 }

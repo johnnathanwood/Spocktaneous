@@ -13,22 +13,6 @@ export default Object.create(null, {
 
     //looky here. get All Ascend and call later for ascending order
 
-    getAllAscend: {
-        value: (resource) => {
-            return fetch(`${remoteURL}/${resource}?_sort=date&_order=asc`)
-            .then(result => result.json())
-        }
-
-    },
-    
-    getUnfinishedEvents: {
-        value: (resource) => {
-            return fetch(`${remoteURL}/${resource}?isChecked=false&_sort=date&_order=asc`)
-            .then(result => result.json())
-        }
-
-    },
-
     getAll: {
         value: (resource) => {
             return fetch(`${remoteURL}/${resource}`)
