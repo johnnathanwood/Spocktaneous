@@ -1,76 +1,60 @@
 import React, { Component } from 'react'
 
-class TripPageList extends Component {
-    findUserName = trips => {
-        return this.props.users.find(user => user.id === trips.userId).username
-    }
+class TripPageList extends Component{
+
+    formatDate = tripDate => {
+        let date = new Date (tripDate)
+        var monthNames = [
+          "January", "February", "March",
+          "April", "May", "June", "July",
+          "August", "September", "October",
+          "November", "December"
+        ];
+
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        // return day + ' ' + monthNames[monthIndex] + ' ' + year;
+        return monthIndex + '/' +day+ '/'+year;
+      }
 
     render() {
-        // console.log(this.props.users.find(user => user.userName === "MessageTest"))
-        // console.log(this.props.users)
-        // console.log(this.props)
-        const credentials = JSON.parse(localStorage.getItem('credentials'))
-
-
-
-
-        return (
-            <React.Fragment>
-
-                <div className="tripsButton">
-                    <button type="button"
+        return (<React.Fragment>
+            <div className="tripButton">
+                <button type="button"
                         className="btn btn-success"
                         onClick={() => {
-                            this.props.history.push("/trip/new")
-                        }
+                            this.props.history.push("/trip/new")}
                         }>
-                        Create new message
-                    </button>
-                </div>
+                    test
+                </button>
+            </div>
+            <section className="trips">
+            {
+                //sort by date?
+                // it is easier to sort by server call
 
-                <section>
-                    <div>
-                        <h2 className="formHeader">What everyone is saying</h2>
-                        <section className="trips">
-                            {
-                                this.props.trips.map(trip =>
-                                    <div id={`trip--${trip.id}`} key={trip.id} className="tripCard">
-                                        <div id="tripCard-body">
-                                            <h6 className="tripCard-title">
-                                                <section className="formCard">
-                                                    <h5>{this.findUserName(trip)}</h5>
-                                                    <h6>{trip.budget}</h6>
-                                                    <h6>{trip.location}</h6>
-                                                    <p>{trip.date}</p>
-                                                    <button
-                                                        onClick={() => this.props.deleteTrip(trip.id)
-                                                            .then(() => this.props.history.push("/trip"))}
-                                                        className="nav-link-delete"><hover>Delete</hover></button>
-                                                    <button
-                                                        onClick={() => this.props.history.push(`/messages/edit/${trip.id}`)}
-                                                        className="card-link-edit"><span>Edit</span></button>
-
-
-
-                                                </section>
-
-                                            </h6>
-                                        </div>
-                                    </div>
-
-
-
-
-
-                                )}
-                        </section>
+                this.props.trip.map(trip =>
+                    <div key={trip.id} className="card">
+                        <div className="card-body">
+                            <h5 className="card-title">
+                                {this.formatDate(trip.date)}
+                                {/* {event.date} */}
+                                    </h5>
+                                <button
+                                    onClick={() => this.props.deleteTrip(trip.id)}
+                                    className="nav-link-quit">No Thankyou</button>
+                            <h4 className="card-tile">{trip.tripName}
+                                </h4>
+                        </div>
                     </div>
-
-                </section>
+                )
+            }
+            </section>
 
             </React.Fragment>
-        )
-    }
-}
+    )
+}}
 
-export default TripPageList
+export default TripPageList;

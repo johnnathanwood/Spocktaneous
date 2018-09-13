@@ -10,7 +10,7 @@ export default class TripPageForm extends Component {
 
 
     state = {
-        tripId: [],
+        tripId: 1,
         tripBudget: [],
         tripLocation: [],
         tripDate: []

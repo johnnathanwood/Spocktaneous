@@ -1,4 +1,4 @@
-import {Route, Redirect} from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import React, { Component } from 'react';
 import DataManager from './modules/DataManager'
 import HomePage from './components/home/HomePage'
@@ -15,6 +15,7 @@ export default class ApplicationViews extends Component {
     
 state = {
     users: [],
+    trip: [],
     isLoaded: false
   }
 
@@ -62,22 +63,16 @@ state = {
     componentDidMount() {
 
         const newState = {}
-        DataManager.getAll("users")
-          .then(allUsers => {
-            newState.users = allUsers
-          }) 
-
         DataManager.getAll("trip")
-           .then(alltrip => {
-            newState.trip = alltrip
-            console.log(alltrip,"hello")
+          .then(alltrip => {
+            newState.users = alltrip
           })
           .then(() => {
             this.setState(newState)
-            console.log(newState)
-            
           })
-        }   
+        }
+    
+          
 
     render() {
         return (
@@ -90,13 +85,15 @@ state = {
                 users={this.state.users} />
             }} />
 
-             <Route exact path="/trip" render={(props) => {
+           <Route exact path="/trip" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageList {...props}
-            editTrip={this.editTrip}
-            deleteTrip={this.deleteTrip} />
+              users={this.state.users}
+              editTrip={this.editTrip}
+              deleteTrip={this.deleteTrip}
+              trip={this.state.trip} />
           } else {
-            return <Redirect to="/login" />
+            return <Redirect to="/" />
           }
         }} />
         <Route exact path="/trip/new" render={(props) => {
