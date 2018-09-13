@@ -41,8 +41,8 @@ state = {
       user: user
     }))
 
-    addTrip = trip => DataManager.add("trips", trip)
-    .then(() => DataManager.getAll("trips"))
+    addTrip = trip => DataManager.add("trip", trip)
+    .then(() => DataManager.getAll("trip"))
     .then(trip => this.setState({
       trip: trip
     }))

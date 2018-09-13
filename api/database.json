@@ -35,6 +35,12 @@
       "email": "1@aol.com",
       "password": "1",
       "id": 6
+    },
+    {
+      "username": "testv1",
+      "email": "1@aol.com",
+      "password": "1",
+      "id": 7
     }
   ],
   "trip": [
@@ -44,6 +50,13 @@
       "location": "my location",
       "date": "",
       "userId": 3
+    },
+    {
+      "id": [],
+      "budget": "under200",
+      "location": [],
+      "date": "2018-09-13T16:46:08.264Z",
+      "userId": 6
     }
   ]
 }
