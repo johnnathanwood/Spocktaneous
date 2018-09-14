@@ -4,6 +4,7 @@ export default class TripPageForm extends Component {
     
     
     
+    
 
 
     //set initial state here
@@ -39,6 +40,9 @@ export default class TripPageForm extends Component {
     }
     
     render() {
+
+       
+        
 
         return (
             <React.Fragment>
