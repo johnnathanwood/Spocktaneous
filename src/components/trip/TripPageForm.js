@@ -35,7 +35,7 @@ export default class TripPageForm extends Component {
             userId: credentials.id
         }
 
-        this.props.map(trip)
+        this.props.addTrip(trip)
         .then(() => this.props.history.push("/trip"))
     }
     
