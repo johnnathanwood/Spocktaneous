@@ -15,9 +15,24 @@ export default class ApplicationViews extends Component {
     
 state = {
     users: [],
-    trip: [],
+    trips: [],
     isLoaded: false
   }
+  handleFieldChange = (evt) =>{
+    const stateToChange = {}
+    stateToChange[evt.target.id] = evt.target.value
+    this.setState(stateToChange)
+  }
+  searchForGames = ()=>{
+    const newGamesArray=[]
+    DataManager.search(this.state.userSearch).then((r)=>{
+      for(let i=0;i<r.results.length;i++){
+        newGamesArray.push(r.results[i])
+        this.setState({gamesListSearch : newGamesArray})
+      }
+    })
+  }
+
 
   addUser = users => DataManager.add("users", users)
     .then(() => DataManager.getAll("users"))
@@ -42,10 +57,10 @@ state = {
       user: user
     }))
 
-    addTrip = trip => DataManager.add("trip", trip)
+    addTrip = trips => DataManager.add("trip", trips)
     .then(() => DataManager.getAll("trip"))
-    .then(trip => this.setState({
-      trip: trip
+    .then(trips => this.setState({
+      trip: trips
     }))
 
     deleteTrip = id => DataManager.delete("trip", id)
@@ -63,9 +78,9 @@ state = {
     componentDidMount() {
 
         const newState = {}
-        DataManager.getAll("trip")
-          .then(alltrip => {
-            newState.users = alltrip
+        DataManager.getAll("trips")
+          .then(alltrips => {
+            newState.users = alltrips
           })
           .then(() => {
             this.setState(newState)
@@ -91,7 +106,7 @@ state = {
               users={this.state.users}
               editTrip={this.editTrip}
               deleteTrip={this.deleteTrip}
-              trip={this.state.trip} />
+              trip={this.state.trips} />
           } else {
             return <Redirect to="/" />
           }
@@ -99,15 +114,15 @@ state = {
         <Route exact path="/trip/new" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageForm {...props}
-              trips={this.state.trip}
-              addTrips={this.addTrip} />
+              trips={this.state.trips}
+              addTrips={this.addTrips} />
           } else {
             return <Redirect to="/" />
           }
         }} />
         <Route exact path="/trip/edit/:tripId(\d+)" render={(props) => {
           if (this.isAuthenticated()) {
-            return <TripPageEdit  {...props} editTrip={this.editTrip} trip={this.state.trip} />
+            return <TripPageEdit  {...props} editTrip={this.editTrip} trip={this.state.trips} />
           } else {
             return <Redirect to="/login" />
           }
