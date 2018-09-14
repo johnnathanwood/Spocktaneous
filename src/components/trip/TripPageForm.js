@@ -4,6 +4,7 @@ export default class TripPageForm extends Component {
     
     
     
+    
 
 
     //set initial state here
@@ -26,7 +27,7 @@ export default class TripPageForm extends Component {
     constructNewTrip = evt => {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
-        const trips = {
+        const trip = {
             id: this.state.tripId,
             budget: this.state.tripBudget,
             location: this.state.tripLocation,
@@ -34,11 +35,14 @@ export default class TripPageForm extends Component {
             userId: credentials.id
         }
 
-        this.props.map(trips)
+        this.props.map(trip)
         .then(() => this.props.history.push("/trip"))
     }
     
     render() {
+
+       
+        
 
         return (
             <React.Fragment>

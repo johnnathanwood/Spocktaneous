@@ -23,17 +23,7 @@ state = {
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
   }
-  searchForGames = ()=>{
-    const newGamesArray=[]
-    DataManager.search(this.state.userSearch).then((r)=>{
-      for(let i=0;i<r.results.length;i++){
-        newGamesArray.push(r.results[i])
-        this.setState({gamesListSearch : newGamesArray})
-      }
-    })
-  }
-
-
+  
   addUser = users => DataManager.add("users", users)
     .then(() => DataManager.getAll("users"))
     .then(users => this.setState({
