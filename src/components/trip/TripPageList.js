@@ -9,7 +9,6 @@ export default class TripPageList extends Component {
             this.props.trip && this.props.trip.map((trip) => {
                 return (
                     <div key={trip.id}>
-                        {trip.trip.location}
                         {trip.location}
                         {trip.date}
                         {trip.budget.price}
