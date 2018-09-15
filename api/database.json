@@ -56,7 +56,7 @@
           "name": "Nashville 2",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -72,7 +72,7 @@
           "name": "Nashville 3",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -88,7 +88,7 @@
           "name": "Nashville 4",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -104,7 +104,7 @@
           "name": "Nashville 5",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -120,7 +120,7 @@
           "name": "Nashville 6",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -136,7 +136,7 @@
           "name": "Nashville 7",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -152,7 +152,7 @@
           "name": "Nashville 8",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -168,7 +168,7 @@
           "name": "Nashville 9",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -184,7 +184,7 @@
           "name": "Nashville 10",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -200,7 +200,7 @@
           "name": "Nashville 1",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -216,7 +216,7 @@
           "name": "Nashville 1",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -232,7 +232,7 @@
           "name": "Nashville 1",
           "city": "Nashville",
           "street": "123 South down st.",
-          "zipecode": "37011",
+          "zipcode": "37011",
           "state": "TN"
         },
         "date": ""
@@ -262,6 +262,43 @@
       "date": "2018-09-15T22:34:37.743Z",
       "userId": 8,
       "id": 1004
+    },
+    {
+      "budget": "",
+      "location": "",
+      "date": "2018-09-15T22:40:56.045Z",
+      "userId": 8,
+      "id": 1005
+    },
+    {
+      "budget": "under50",
+      "location": "",
+      "date": "2018-09-15T22:41:39.312Z",
+      "userId": 8,
+      "id": 1006
+    },
+    {
+      "budget": "",
+      "date": "2018-09-15T22:45:00.076Z",
+      "userId": 8,
+      "id": 1007
+    },
+    {
+      "budget": "under200",
+      "date": "2018-09-15T22:45:36.335Z",
+      "userId": 8,
+      "id": 1008
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-15T22:49:28.966Z",
+      "userId": 8,
+      "id": 1009
     }
   ]
 }
