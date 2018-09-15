@@ -11,7 +11,7 @@ export default class TripPageForm extends Component {
 
 
     state = {
-        tripId: 1,
+        id: 1004,
         tripBudget: "",
         tripLocation: "",
         tripDate: ""
@@ -28,7 +28,7 @@ export default class TripPageForm extends Component {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
         const trip = {
-            id: this.state.tripId,
+            // id: this.state.id,
             budget: this.state.tripBudget,
             location: this.state.tripLocation,
             date: new Date().toISOString(),
