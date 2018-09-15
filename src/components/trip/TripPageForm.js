@@ -13,7 +13,11 @@ export default class TripPageForm extends Component {
     state = {
         id: 1004,
         tripBudget: "",
-        tripLocation: "",
+        tripName: "",
+        tripCity: "",
+        tripStreet: "",
+        tripState: "",
+        tripZipCode: "",
         tripDate: ""
     }
 
@@ -30,7 +34,11 @@ export default class TripPageForm extends Component {
         const trip = {
             // id: this.state.id,
             budget: this.state.tripBudget,
-            location: this.state.tripLocation,
+            name: this.state.tripName,
+            city: this.state.tripState,
+            street: this.state.tripStreet,
+            state: this.state.tripState,
+            zipcode: this.state.tripZipCode,
             date: new Date().toISOString(),
             userId: credentials.id
         }
@@ -144,7 +152,7 @@ export default class TripPageForm extends Component {
                         </section>
                     </div>
                     <p></p>
-                    <button type="go" onClick={this.constructNewTrip} className="btn btn-primary">Go</button>
+                    <button type="saveTrip" onClick={this.constructNewTrip} className="btn btn-primary">Save Trip</button>
                 </form>
             </React.Fragment>
         )
