@@ -15,6 +15,7 @@ export default Object.create(null, {
 
     getAll: {
         value: (resource) => {
+            console.log('getAllResource ', resource);
             return fetch(`${remoteURL}/${resource}`)
             .then(result => result.json())
         }
@@ -28,6 +29,8 @@ export default Object.create(null, {
     },
     add: {
         value: (resource, item) => {
+            console.log('inAdd resource', resource);
+            console.log('inADD item', item);
             return fetch(`${remoteURL}/${resource}`, {
                 method: "POST",
                 headers: {
@@ -35,7 +38,10 @@ export default Object.create(null, {
                 },
                 body: JSON.stringify(item)
             })
-            .then(result => result.json())
+            .then(result => {
+                console.log('result', result);
+                return result.json()
+            })
         }
     },
     edit: {

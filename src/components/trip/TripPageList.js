@@ -2,21 +2,28 @@
 import React, { Component } from 'react';
 
 export default class TripPageList extends Component {
-    render(){
-        return(
-            
-            
-            <section>
-                <section>
-                    
-                <header>Hello{this.props.trip.name}</header>
-                <fieldset>
-                <p>Location:{this.props.trip.location}</p>
-                <p>Date:{this.props.trip.date}</p>
-                <p>Price:{this.props.trip.price}</p>
-                </fieldset>
-                </section>
-            </section>
+    render() {
+        console.log('TripPageList ', this.props.trip);
+        return (
+
+            this.props.trip && this.props.trip.map((trip) => {
+                return (
+                    <div key={trip.id}>
+                        {trip.location}
+                        {trip.date}
+                        {trip.budget.price}
+                    </div>
+                    // <section>
+                    //     <header>Hello{trip.name}</header>
+                    //     <fieldset>
+                    //         <p>Location:{trip.location}</p>
+                    //         <p>Date:{trip.date}</p>
+                    //         <p>Price:{trip.price}</p>
+                    //     </fieldset>
+                    // </section>
+                )
+            })
+
         )
     }
 }

@@ -13,7 +13,7 @@ export default class ApplicationViews extends Component {
     // Check if credentials are in local storage
     isAuthenticated = () => localStorage.getItem("credentials") !== null
     
-state = {
+  state = {
     users: [],
     trips: [],
     isLoaded: false
@@ -47,11 +47,17 @@ state = {
       user: user
     }))
 
-    addTrip = trips => DataManager.add("trip", trips)
-    .then(() => DataManager.getAll("trip"))
-    .then(trips => this.setState({
-      trip: trips
-    }))
+    addTrip = (tripToAdd) => 
+    DataManager.add("trips", tripToAdd)
+    .then(() => DataManager.getAll("trips"))
+    .then(allTrips =>{ 
+      this.setState({
+      trips: allTrips
+    })}
+  )
+
+
+  
 
     deleteTrip = id => DataManager.delete("trip", id)
     .then(() => DataManager.getAll("trip"))
@@ -92,6 +98,7 @@ state = {
 
            <Route exact path="/trip" render={(props) => {
           if (this.isAuthenticated()) {
+            console.log('tripPageList123: ', this.state.trips);
             return <TripPageList {...props}
               users={this.state.users}
               editTrip={this.editTrip}
@@ -105,7 +112,7 @@ state = {
           if (this.isAuthenticated()) {
             return <TripPageForm {...props}
               trips={this.state.trips}
-              addTrips={this.addTrips} />
+              addTrip={this.addTrip} />
           } else {
             return <Redirect to="/" />
           }
