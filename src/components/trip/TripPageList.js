@@ -10,9 +10,13 @@ export default class TripPageList extends Component {
                 console.log("my trip", trip)
                 return (
                     <div key={trip.id}>
-                        {trip.location}
+                        {trip.name}
+                        {trip.city}
+                        {trip.street}
+                        {trip.state}
+                        {trip.zipcode}
                         {trip.date}
-                        {trip.budget.price}
+                        {trip.price}
                     </div>
                     // <section>
                     //     <header>Hello{trip.name}</header>
