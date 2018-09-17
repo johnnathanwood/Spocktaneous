@@ -55,10 +55,15 @@ export default class TripParametersPage extends Component {
                                 
                             </form>
                             
-                                
-
                         </section>
-                    </div>
+                        <button type="goButton"
+                            className="btn btn-success"
+                            onClick={() => {
+                                this.props.history.push("/trip/trips")
+                            }
+                            }>Go </button>
+                </div>
+
             
             </React.Fragment>
         )

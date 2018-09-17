@@ -44,7 +44,7 @@ export default class TripPageCreate extends Component {
         }
 
         this.props.addTrip(trip)
-        .then(() => this.props.history.push("/trip"))
+        .then(() => this.props.history.push("/trip/trips"))
     }
     
     render() {
