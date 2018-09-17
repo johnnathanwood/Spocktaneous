@@ -90,8 +90,8 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
-            <Route exact path="/search" component={TripPageSearch}/>
-            <Route exact path="/parameters" component={TripParametersPage}/>
+            <Route exact path="/trip/search" component={TripPageSearch}/>
+            <Route exact path="/trip/parameters" component={TripParametersPage}/>
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" render={(props) => {
@@ -100,7 +100,7 @@ export default class ApplicationViews extends Component {
                 users={this.state.users} />
             }} />
 
-           <Route exact path="/trip" render={(props) => {
+           <Route exact path="/trip/trips" render={(props) => {
           if (this.isAuthenticated()) {
             console.log('tripPageList123: ', this.state.trips);
             return <TripPageList {...props}

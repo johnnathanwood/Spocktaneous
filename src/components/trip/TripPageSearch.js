@@ -19,7 +19,7 @@ export default class TripPageSearch extends Component {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push("/")
+                                this.props.history.push("/trip/parameters")
                             }
                             }>Search Ideas</button>
                     </div>
@@ -27,7 +27,7 @@ export default class TripPageSearch extends Component {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push("/")
+                                this.props.history.push("/trip/new")
                             }
                             }>Create Trip</button>
                     </div>
@@ -35,10 +35,11 @@ export default class TripPageSearch extends Component {
                         <button type="button"
                             className="btn btn-success"
                             onClick={() => {
-                                this.props.history.push("/edit")
+                                this.props.history.push("/trip/edit")
                             }
                             }>Manage Trips </button>
                     </div>
+                    
                 </div>
                     
             </React.Fragment>
