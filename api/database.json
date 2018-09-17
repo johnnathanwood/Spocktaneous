@@ -47,6 +47,12 @@
       "email": "test@aol.com",
       "password": "123",
       "id": 8
+    },
+    {
+      "username": "JohnWood",
+      "email": "1@aol.com",
+      "password": "123",
+      "id": 9
     }
   ],
   "trips": [
@@ -387,6 +393,204 @@
       "date": "2018-09-17T16:02:46.836Z",
       "userId": 3,
       "id": 1017
+    },
+    {
+      "budget": "under50",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T16:43:04.149Z",
+      "userId": 3,
+      "id": 1018
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T16:43:55.212Z",
+      "userId": 3,
+      "id": 1019
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T16:45:45.094Z",
+      "userId": 3,
+      "id": 1020
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:48:33.131Z",
+      "userId": 3,
+      "id": 1021
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:49:26.214Z",
+      "userId": 3,
+      "id": 1022
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:51:27.406Z",
+      "userId": 3,
+      "id": 1023
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:53:28.051Z",
+      "userId": 3,
+      "id": 1024
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:54:51.548Z",
+      "userId": 3,
+      "id": 1025
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:55:54.482Z",
+      "userId": 3,
+      "id": 1026
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:57:23.105Z",
+      "userId": 3,
+      "id": 1027
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T18:58:50.365Z",
+      "userId": 3,
+      "id": 1028
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:00:06.843Z",
+      "userId": 3,
+      "id": 1029
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:01:00.295Z",
+      "userId": 3,
+      "id": 1030
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:15:04.948Z",
+      "userId": 3,
+      "id": 1031
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:16:30.076Z",
+      "userId": 3,
+      "id": 1032
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:17:27.486Z",
+      "userId": 3,
+      "id": 1033
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:17:42.844Z",
+      "userId": 3,
+      "id": 1034
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:19:56.392Z",
+      "userId": 3,
+      "id": 1035
     }
   ]
 }
