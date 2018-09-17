@@ -233,20 +233,20 @@
       }
     },
     {
-      "trip": {
-        "location": {
+       
+    
           "name": "Nashville 1",
           "city": "Nashville",
           "street": "123 South down st.",
           "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
+          "state": "TN",
+        
+        "date": "",
+      
       "id": 1001,
-      "budget": {
+      
         "price": "under $50"
-      }
+      
     },
     {
       "budget": "",
@@ -591,6 +591,50 @@
       "date": "2018-09-17T19:19:56.392Z",
       "userId": 3,
       "id": 1035
+    },
+    {
+      "budget": "under200",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:50:36.196Z",
+      "userId": 3,
+      "id": 1036
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:52:20.287Z",
+      "userId": 3,
+      "id": 1037
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:52:32.730Z",
+      "userId": 3,
+      "id": 1038
+    },
+    {
+      "budget": "",
+      "name": "",
+      "city": "",
+      "street": "",
+      "state": "",
+      "zipcode": "",
+      "date": "2018-09-17T19:52:46.777Z",
+      "userId": 3,
+      "id": 1039
     }
   ]
 }
