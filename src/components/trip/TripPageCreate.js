@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class TripPageForm extends Component {
+export default class TripPageCreate extends Component {
     
     
     
@@ -54,7 +54,7 @@ export default class TripPageForm extends Component {
 
         return (
             <React.Fragment>
-                <h2>Lets have a Spocktaneous day!</h2>
+                <h2>Create your own Spockatenous trip!</h2>
                 <form className="messageForm">
                     <div className="form-group">
                         <section className="tripField">

@@ -4,8 +4,10 @@ import DataManager from './modules/DataManager'
 import HomePage from './components/home/HomePage'
 import Login from './components/login/LoginForm'
 import Register from './components/login/RegisterForm'
+import TripPageSearch from './components/trip/TripPageSearch'
+import TripParametersPage from './components/trip/TripParametersPage'
 import TripPageList from './components/trip/TripPageList'
-import TripPageForm from './components/trip/TripPageForm'
+import TripPageCreate from './components/trip/TripPageCreate'
 import TripPageEdit from './components/trip/TripPageEdit'
 
 export default class ApplicationViews extends Component {
@@ -88,6 +90,8 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
+            <Route exact path="/search" component={TripPageSearch}/>
+            <Route exact path="/parameters" component={TripParametersPage}/>
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" render={(props) => {
@@ -110,7 +114,7 @@ export default class ApplicationViews extends Component {
         }} />
         <Route exact path="/trip/new" render={(props) => {
           if (this.isAuthenticated()) {
-            return <TripPageForm {...props}
+            return <TripPageCreate {...props}
               trips={this.state.trips}
               addTrip={this.addTrip} />
           } else {
