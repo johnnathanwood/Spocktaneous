@@ -57,584 +57,373 @@
   ],
   "trips": [
     {
-      "trip": {
-        "location": {
-          "name": "Nashville 2",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 2,
-      "budget": {
-        "price": "under $50"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 3",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 3,
-      "budget": {
-        "price": "under $50"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 4",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 4,
-      "budget": {
-        "price": "under $100"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 5",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 5,
-      "budget": {
-        "price": "under $100"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 6",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 6,
-      "budget": {
-        "price": "under $200"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 7",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 7,
-      "budget": {
-        "price": "Free"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 8",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 8,
-      "budget": {
-        "price": "Free"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 9",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 9,
-      "budget": {
-        "price": "Free"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 10",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 10,
-      "budget": {
-        "price": "Free"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 1",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 1,
-      "budget": {
-        "price": "under $50"
-      }
-    },
-    {
-      "trip": {
-        "location": {
-          "name": "Nashville 1",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN"
-        },
-        "date": ""
-      },
-      "id": 1000,
-      "budget": {
-        "price": "under $50"
-      }
-    },
-    {
-       
-    
-          "name": "Nashville 1",
-          "city": "Nashville",
-          "street": "123 South down st.",
-          "zipcode": "37011",
-          "state": "TN",
-        
-        "date": "",
-      
+      "name": "Nashville 1",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
       "id": 1001,
-      
-        "price": "under $50"
-      
+      "price": "under $200"
     },
     {
-      "budget": "",
-      "location": "",
-      "date": "2018-09-15T21:40:16.875Z",
+      "name": "Nashville 2",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $50"
+    },
+    {
+      "name": "Nashville 3",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $50"
+    },
+    {
+      "name": "Nashville 4",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under free"
+    },
+    {
+      "name": "Nashville 5",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $100"
+    },
+    {
+      "name": "Nashville 6",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $100"
+    },
+    {
+      "name": "Nashville 7",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "free"
+    },
+    {
+      "name": "Nashville 8",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "free"
+    },
+    {
+      "name": "Nashville 9",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $200"
+    },
+    {
+      "name": "Nashville 10",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $50"
+    },
+    {
+      "name": "Nashville 11",
+      "city": "Nashville",
+      "street": "123 South down st.",
+      "zipcode": "37011",
+      "state": "TN",
+      "date": "",
+      "id": 1001,
+      "price": "under $100"
+    },
+    {
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:06:00.445Z",
       "userId": 3,
-      "id": 1002
-    },
-    {
-      "budget": "",
-      "location": "",
-      "date": "2018-09-15T21:54:31.656Z",
-      "userId": 8,
       "id": 1003
     },
     {
-      "budget": "under200",
-      "location": "",
-      "date": "2018-09-15T22:34:37.743Z",
-      "userId": 8,
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:08:25.000Z",
+      "userId": 3,
       "id": 1004
     },
     {
-      "budget": "",
-      "location": "",
-      "date": "2018-09-15T22:40:56.045Z",
-      "userId": 8,
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:10:23.646Z",
+      "userId": 3,
       "id": 1005
     },
     {
-      "budget": "under50",
-      "location": "",
-      "date": "2018-09-15T22:41:39.312Z",
-      "userId": 8,
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:12:45.931Z",
+      "userId": 3,
       "id": 1006
     },
     {
-      "budget": "",
-      "date": "2018-09-15T22:45:00.076Z",
-      "userId": 8,
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:14:06.036Z",
+      "userId": 3,
       "id": 1007
     },
     {
-      "budget": "under200",
-      "date": "2018-09-15T22:45:36.335Z",
-      "userId": 8,
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-18T15:15:23.215Z",
+      "userId": 3,
       "id": 1008
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-15T22:49:28.966Z",
-      "userId": 8,
+      "state": "",
+      "date": "2018-09-18T15:15:40.927Z",
+      "userId": 3,
       "id": 1009
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T13:53:21.286Z",
-      "userId": 8,
+      "state": "",
+      "date": "2018-09-18T15:16:57.275Z",
+      "userId": 3,
       "id": 1010
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T14:07:33.941Z",
+      "state": "",
+      "date": "2018-09-18T15:24:17.444Z",
       "userId": 3,
       "id": 1011
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T14:32:50.344Z",
+      "state": "",
+      "date": "2018-09-18T15:25:53.221Z",
       "userId": 3,
       "id": 1012
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T15:59:15.739Z",
+      "state": "",
+      "date": "2018-09-18T15:27:06.444Z",
       "userId": 3,
       "id": 1013
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:00:26.012Z",
+      "state": "",
+      "date": "2018-09-18T15:28:55.149Z",
       "userId": 3,
       "id": 1014
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:00:42.433Z",
+      "state": "",
+      "date": "2018-09-18T15:51:31.605Z",
       "userId": 3,
       "id": 1015
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:02:02.801Z",
+      "state": "",
+      "date": "2018-09-18T16:12:46.049Z",
       "userId": 3,
       "id": 1016
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:02:46.836Z",
+      "state": "",
+      "date": "2018-09-18T16:16:00.413Z",
       "userId": 3,
       "id": 1017
     },
     {
-      "budget": "under50",
-      "name": "",
+      "name": [],
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:43:04.149Z",
+      "state": "",
+      "date": "2018-09-18T16:16:32.971Z",
       "userId": 3,
       "id": 1018
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:43:55.212Z",
+      "state": "",
+      "date": "2018-09-18T16:22:26.932Z",
+      "price": "",
       "userId": 3,
       "id": 1019
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T16:45:45.094Z",
+      "state": "",
+      "date": "2018-09-18T16:23:14.430Z",
+      "price": "",
       "userId": 3,
       "id": 1020
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:48:33.131Z",
+      "state": "",
+      "date": "2018-09-18T16:24:04.520Z",
+      "price": "",
       "userId": 3,
       "id": 1021
     },
     {
-      "budget": "",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:49:26.214Z",
+      "state": "",
+      "date": "2018-09-18T16:25:12.908Z",
+      "price": "",
       "userId": 3,
       "id": 1022
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:51:27.406Z",
+      "state": "",
+      "date": "2018-09-18T16:29:17.343Z",
+      "price": "",
       "userId": 3,
       "id": 1023
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:53:28.051Z",
+      "state": "",
+      "date": "2018-09-18T16:30:29.352Z",
+      "price": "",
       "userId": 3,
       "id": 1024
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:54:51.548Z",
+      "state": "",
+      "date": "2018-09-18T16:31:13.019Z",
+      "price": "",
       "userId": 3,
       "id": 1025
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:55:54.482Z",
+      "state": "",
+      "date": "2018-09-18T16:33:12.657Z",
+      "price": "",
       "userId": 3,
       "id": 1026
     },
     {
-      "budget": "under200",
       "name": "",
       "city": "",
       "street": "",
-      "state": "",
       "zipcode": "",
-      "date": "2018-09-17T18:57:23.105Z",
+      "state": "",
+      "date": "2018-09-18T16:33:47.785Z",
+      "price": "",
       "userId": 3,
       "id": 1027
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T18:58:50.365Z",
-      "userId": 3,
-      "id": 1028
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:00:06.843Z",
-      "userId": 3,
-      "id": 1029
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:01:00.295Z",
-      "userId": 3,
-      "id": 1030
-    },
-    {
-      "budget": "under200",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:15:04.948Z",
-      "userId": 3,
-      "id": 1031
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:16:30.076Z",
-      "userId": 3,
-      "id": 1032
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:17:27.486Z",
-      "userId": 3,
-      "id": 1033
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:17:42.844Z",
-      "userId": 3,
-      "id": 1034
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:19:56.392Z",
-      "userId": 3,
-      "id": 1035
-    },
-    {
-      "budget": "under200",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:50:36.196Z",
-      "userId": 3,
-      "id": 1036
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:52:20.287Z",
-      "userId": 3,
-      "id": 1037
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:52:32.730Z",
-      "userId": 3,
-      "id": 1038
-    },
-    {
-      "budget": "",
-      "name": "",
-      "city": "",
-      "street": "",
-      "state": "",
-      "zipcode": "",
-      "date": "2018-09-17T19:52:46.777Z",
-      "userId": 3,
-      "id": 1039
     }
   ]
 }
