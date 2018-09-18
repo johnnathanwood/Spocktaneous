@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+
+
 export default class TripPageCreate extends Component {
     
     
@@ -11,20 +13,27 @@ export default class TripPageCreate extends Component {
 
 
     state = {
-        id: 1004,
-        tripBudget: "",
-        tripName: "",
-        tripCity: "",
-        tripStreet: "",
-        tripState: "",
-        tripZipCode: "",
-        tripDate: ""
+        name: "",
+        city: "",
+        street: "",
+        zipCode: "",
+        state: "",
+        date: "",
+        price: ""
     }
 
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
+    }
+    componentDidMount () {
+        const script = document.createElement("script");
+
+        script.src = "countries.js";
+        script.async = true;
+
+        document.body.appendChild(script);
     }
     
 
@@ -33,13 +42,13 @@ export default class TripPageCreate extends Component {
         const credentials = JSON.parse(localStorage.getItem('credentials'))
         const trip = {
             // id: this.state.id,
-            budget: this.state.tripBudget,
-            name: this.state.tripName,
-            city: this.state.tripState,
-            street: this.state.tripStreet,
-            state: this.state.tripState,
-            zipcode: this.state.tripZipCode,
+            name: this.state.name,
+            city: this.state.city,
+            street: this.state.street,
+            zipcode: this.state.zipCode,
+            state: this.state.state,
             date: new Date().toISOString(),
+            price: this.state.price,
             userId: credentials.id
         }
 
@@ -54,6 +63,8 @@ export default class TripPageCreate extends Component {
 
         return (
             <React.Fragment>
+                <script src="countries.js"></script>
+                
                 <h2>Create your own Spockatenous trip!</h2>
                 <form className="messageForm">
                     <div className="form-group">
@@ -120,14 +131,11 @@ export default class TripPageCreate extends Component {
                                 id="street-of"
                                 placeholder="zipcode"
                                 size="35" />
-                            <label htmlFor="location">State</label>
-                            
-                            <input type="text" required="true"
-                                className="form-control"
-                                onChange={this.handleFieldChange}
-                                id="street-of"
-                                placeholder="state"
-                                size="35" /> 
+                            <select name="state" id="state">
+                            <option value="TN">TN</option>
+                            </select>
+
+                               
                             
                                 
 
