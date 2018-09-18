@@ -41,7 +41,7 @@ export default class TripPageCreate extends Component {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
         const trip = {
-            // id: this.state.id,
+            tripId: this.state.tripId,
             name: this.state.name,
             city: this.state.city,
             street: this.state.street,

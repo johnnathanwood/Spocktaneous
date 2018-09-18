@@ -16,30 +16,39 @@ handleFieldChange = evt => {
 
 componentDidMount() {
     // console.log(this.state)
-    const trip = this.props.tasks.find(a => a.id === parseInt(this.props.match.params.taskId, 0))
+    const trip = this.props.trip.find(a => a.id === parseInt(this.props.match.params.tripId, 0))
     this.setState(trip);
 }
-constructNewTrip = (evt) => {
+constructNewTrip = evt => {
     evt.preventDefault()
-    console.log(this.state)
+    const credentials = JSON.parse(localStorage.getItem('credentials'))
     let newTrip = {
-            budget: this.state.tripBudget,
-            location: this.state.tripLocation,
-            date: new Date().toISOString(),
+        // id: this.state.id,
+        name: this.state.name,
+        city: this.state.city,
+        street: this.state.street,
+        zipcode: this.state.zipCode,
+        state: this.state.state,
+        date: new Date().toISOString(),
+        price: this.state.price,
     }
-    this.props.editTrip(newTrip.id, newTrip)
+    this.props.editTrip(this.state.id, newTrip)
     .then(()=>{
-        this.props.history.push("/trip")
+        this.props.history.push("/trip/trips")
     })
 }
 
 
 // in this form be sure to add existing STATE INFO in PLACEHOLDER>
 render() {
+
+       
     return (
         <React.Fragment>
-            <h2>Lets have a Spocktaneous day!</h2>
-            <form className="tripForm">
+            <script src="countries.js"></script>
+            
+            <h2>Edit your shit!</h2>
+            <form className="messageForm">
                 <div className="form-group">
                     <section className="tripField">
                         <label htmlFor=""></label>
@@ -50,7 +59,7 @@ render() {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="tripBudget"
-                            placeholder="whats your budget"
+                            placeholder={this.state.tripBudget}
                             size="auto">
                             <option value="free" selected>Free</option>
                             <option value="under50">Under $50</option>
@@ -64,17 +73,52 @@ render() {
                 <div className="form-group">
                 </div>
                 <div className="form-group">
-                    <section className="locationField">
+                <section className="eventNameField">
                         <p></p>
-                        <label htmlFor="location">Location</label>
+                        <label htmlFor="eventName">Event Name</label>
                         <p></p>
-                        <select
+                        <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="location"
-                            placeholder="select location">
-                            <option value="mylocation" selected>My Location</option>
+                            id="eventName"
+                            placeholder={this.state.eventName}
+                            size="35" />
+                        
+                            
+
+                    </section>
+                    <section className="locationField">
+                        
+                        <label htmlFor="city">City</label>
+                        
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="locationof"
+                            placeholder={this.state.locationof}
+                            size="35" />
+                        <label htmlFor="street">Street</label>
+                        
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="streetof"
+                            placeholder={this.state.streetof}
+                            size="35" />
+                        <label htmlFor="zipcode">ZipCode</label>
+                        <input type="text" required="true"
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="zipcode"
+                            placeholder={this.state.zipcode}
+                            size="35" />
+                        <select name="state" id="state"
+                        placeholder={this.state.state}>
+                        
+                        <option value="TN">TN</option>
                         </select>
+
+                           
                         
                             
 
@@ -89,7 +133,7 @@ render() {
                             className="form-control"
                             onChange={this.handleFieldChange}
                             id="date"
-                            placeholder="select date">
+                            placeholder={this.state.date}>
                             <input type="date"></input>
                             
                         </form>
@@ -99,7 +143,7 @@ render() {
                     </section>
                 </div>
                 <p></p>
-                <button type="go" onClick={this.constructNewTrip} className="btn btn-primary">Update</button>
+                <button type="updateTrip" onClick={this.constructNewTrip} className="btn btn-primary">Update Trip</button>
             </form>
         </React.Fragment>
     )
