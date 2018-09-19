@@ -257,12 +257,12 @@
       "id": 1007
     },
     {
-      "name": "TEST V6",
+      "name": "TEST V6.2",
       "city": "White House",
       "street": "303 Skyline Dr.",
       "zipcode": "",
       "state": "Tennessee",
-      "date": "2018-09-19T16:10:57.958Z",
+      "date": "2018-09-19T18:19:37.984Z",
       "price": "under100",
       "userId": 3,
       "id": 1008
@@ -365,6 +365,17 @@
       "price": "Under $200",
       "userId": 3,
       "id": 1017
+    },
+    {
+      "name": "",
+      "city": "",
+      "street": "",
+      "zipcode": "",
+      "state": "",
+      "date": "2018-09-19T18:19:15.844Z",
+      "price": "",
+      "userId": 3,
+      "id": 1018
     }
   ]
 }
