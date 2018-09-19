@@ -45,21 +45,21 @@ render() {
        
     return (
         <React.Fragment>
-            <script src="countries.js"></script>
+            
             
             <h2>Edit your shit!</h2>
             <form className="messageForm">
                 <div className="form-group">
                     <section className="tripField">
                         <label htmlFor=""></label>
-                        <label htmlFor="tripBudget">Budget</label>
+                        <label htmlFor="price">Budget</label>
                         <p></p>
                          
                         <select type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="tripBudget"
-                            placeholder={this.state.tripBudget}
+                            id="price"
+                            placeholder={this.state.price}
                             size="auto">
                             <option value="free" selected>Free</option>
                             <option value="under50">Under $50</option>
