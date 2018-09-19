@@ -63,11 +63,11 @@ export default class ApplicationViews extends Component {
     trips: trips
   }))
 
-    editTrip = (id, trips) => DataManager.edit("trip", id, trips)
-    .then(() => DataManager.getAll("trip"))
-    .then(trips => this.setState({
-      trip: trips
-    }))
+  editTrip = (id, trips) => DataManager.edit("trips", id, trips)
+  .then(() => DataManager.getAll("trips"))
+  .then(trips => this.setState({
+    trips: trips
+  }))
 
     componentDidMount() {
 
