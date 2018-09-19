@@ -80,7 +80,7 @@ export default class TripPageCreate extends Component {
                                 id="price"
                                 placeholder="whats your budget"
                                 size="auto">
-                                <option value="free">Free</option>
+                                <option value="Free">Free</option>
                                 <option value="Under $50">Under $50</option>
                                 <option value="Under $100">Under $100</option>
                                 <option value="Under $200">Under $200</option>
@@ -126,7 +126,7 @@ export default class TripPageCreate extends Component {
                                 size="35" />
                             <label htmlFor="zipcode">ZipCode</label>
                             
-                            <input type="" required="true"
+                            <input type="number" pattern="[0-9]{5}" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="zipcode"

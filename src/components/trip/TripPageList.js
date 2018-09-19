@@ -21,7 +21,7 @@ export default class TripPageList extends Component {
                             <button
                                 onClick={() => this.props.deleteTrip(trip.id)
                                     .then(() => this.props.history.push("/trip/trips"))}
-                                className="nav-link-delete"><hover>Delete</hover></button>
+                                className="delete">Delete</button>
                             <button
                                 onClick={() => this.props.history.push(`/trip/edit/${trip.id}`)}
                                 className="card-link-edit"><span>Edit</span></button>
