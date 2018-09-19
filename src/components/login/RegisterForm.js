@@ -32,7 +32,7 @@ export default class Register extends Component {
     }
 
     handleButtonClick = () => {
-        document.location.href = 'http://localhost:3000/login'
+        document.location.href = 'http://localhost:3000/trip/search'
 
         const users = {
             username: this.state.username,

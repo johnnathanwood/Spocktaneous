@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import './HomePage.css'
+import "../trip/search.css"
 
 export default class TripPageSearch extends Component {
 

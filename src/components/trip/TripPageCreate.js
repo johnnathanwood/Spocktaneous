@@ -41,7 +41,6 @@ export default class TripPageCreate extends Component {
         evt.preventDefault()
         const credentials = JSON.parse(localStorage.getItem('credentials'))
         const trip = {
-            tripId: this.state.tripId,
             name: this.state.name,
             city: this.state.city,
             street: this.state.street,
@@ -51,6 +50,8 @@ export default class TripPageCreate extends Component {
             price: this.state.price,
             userId: credentials.id
         }
+        console.log('trip xxxxx', trip)
+        console.log('TTTTT',this.state.name)
 
         this.props.addTrip(trip)
         .then(() => this.props.history.push("/trip/trips"))
@@ -68,21 +69,21 @@ export default class TripPageCreate extends Component {
                 <h2>Create your own Spockatenous trip!</h2>
                 <form className="messageForm">
                     <div className="form-group">
-                        <section className="tripField">
+                        <section className="priceField">
                             <label htmlFor=""></label>
-                            <label htmlFor="tripBudget">Budget</label>
+                            <label htmlFor="price">Budget</label>
                             <p></p>
                              
                             <select type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="tripBudget"
+                                id="price"
                                 placeholder="whats your budget"
                                 size="auto">
-                                <option value="free" selected>Free</option>
-                                <option value="under50">Under $50</option>
-                                <option value="under100">Under $100</option>
-                                <option value="under200">Under $200</option>
+                                <option value="free">Free</option>
+                                <option value="Under $50">Under $50</option>
+                                <option value="Under $100">Under $100</option>
+                                <option value="Under $200">Under $200</option>
                             </select>
                                 
                             </section>
@@ -91,49 +92,56 @@ export default class TripPageCreate extends Component {
                     <div className="form-group">
                     </div>
                     <div className="form-group">
-                    <section className="eventNameField">
+                    <section className="nameField">
                             <p></p>
-                            <label htmlFor="eventName">Event Name</label>
+                            <label htmlFor="name">Event Name</label>
                             <p></p>
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="eventName"
+                                id="name"
                                 placeholder="event name"
                                 size="35" />
                             
                                 
 
                         </section>
-                        <section className="locationField">
+                        <section className="cityField">
                             
-                            <label htmlFor="location">City</label>
+                            <label htmlFor="city">City</label>
                             
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="location-of"
-                                placeholder="location"
+                                id="city"
+                                placeholder="city"
                                 size="35" />
-                            <label htmlFor="location">Street</label>
+                            <label htmlFor="city">Street</label>
                             
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="street-of"
+                                id="street"
                                 placeholder="street address"
                                 size="35" />
-                            <label htmlFor="location">ZipCode</label>
+                            <label htmlFor="zipcode">ZipCode</label>
+                            
+                            <input type="" required="true"
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="zipcode"
+                                placeholder="zipcode"
+                                size="35" />
+                            
+                            <label htmlFor="state">State</label>
                             
                             <input type="text" required="true"
                                 className="form-control"
                                 onChange={this.handleFieldChange}
-                                id="street-of"
-                                placeholder="zipcode"
+                                id="state"
+                                placeholder="state"
                                 size="35" />
-                            <select name="state" id="state">
-                            <option value="TN">TN</option>
-                            </select>
+                            
 
                                
                             
