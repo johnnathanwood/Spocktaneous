@@ -61,7 +61,7 @@ render() {
                             id="price"
                             placeholder={this.state.price}
                             size="auto">
-                            <option value="free" selected>Free</option>
+                            <option value="Free">Free</option>
                             <option value="under50">Under $50</option>
                             <option value="under100">Under $100</option>
                             <option value="under200">Under $200</option>
@@ -73,37 +73,37 @@ render() {
                 <div className="form-group">
                 </div>
                 <div className="form-group">
-                <section className="eventNameField">
+                <section className="name">
                         <p></p>
-                        <label htmlFor="eventName">Event Name</label>
+                        <label htmlFor="name">Event Name</label>
                         <p></p>
                         <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="eventName"
-                            placeholder={this.state.eventName}
+                            id="name"
+                            placeholder={this.state.name}
                             size="35" />
                         
                             
 
                     </section>
-                    <section className="locationField">
+                    <section className="cityField">
                         
                         <label htmlFor="city">City</label>
                         
                         <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="locationof"
-                            placeholder={this.state.locationof}
+                            id="city"
+                            placeholder={this.state.city}
                             size="35" />
                         <label htmlFor="street">Street</label>
                         
                         <input type="text" required="true"
                             className="form-control"
                             onChange={this.handleFieldChange}
-                            id="streetof"
-                            placeholder={this.state.streetof}
+                            id="street"
+                            placeholder={this.state.street}
                             size="35" />
                         <label htmlFor="zipcode">ZipCode</label>
                         <input type="text" required="true"
@@ -112,11 +112,14 @@ render() {
                             id="zipcode"
                             placeholder={this.state.zipcode}
                             size="35" />
-                        <select name="state" id="state"
-                        placeholder={this.state.state}>
-                        
-                        <option value="TN">TN</option>
-                        </select>
+                        <label htmlFor="state">State</label>
+                            
+                            <input type="text" required="true"
+                                className="form-control"
+                                onChange={this.handleFieldChange}
+                                id="state"
+                                placeholder={this.state.zipcode}
+                                size="35" />
 
                            
                         
@@ -143,7 +146,7 @@ render() {
                     </section>
                 </div>
                 <p></p>
-                <button type="updateTrip" onClick={this.constructNewTrip} className="btn btn-primary">Update Trip</button>
+                <button type="submit" onClick={this.constructNewTrip} className="btn btn-primary">Update Trip</button>
             </form>
         </React.Fragment>
     )
