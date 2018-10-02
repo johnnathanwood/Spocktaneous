@@ -9,17 +9,26 @@ export default class TripParametersPage extends Component {
         tripDate: []
     }
 
-
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
     }
-
+    search = (availableTrips)=>{
+        var searchedTrips =[];
+        console.log(availableTrips[0]);
+        for (var i=0; i < availableTrips.length; i++) {
+            console.log("location: ", availableTrips[i].tripLocation);
+            if (availableTrips[i].tripLocation === this.state.tripLocation && availableTrips[i].tripBudget === this.state.tripBudget) {
+                searchedTrips.push(availableTrips[i]);
+            }
+        }
+    }
     render() {
 
         return (
             <React.Fragment>
+                <div className="parametersForm">
                 <h2>Lets Begin</h2>
                 <label htmlFor ="tripBudget">Trip Budget</label>
                 <select type="text" required="true"
@@ -56,12 +65,27 @@ export default class TripParametersPage extends Component {
                             </form>
                             
                         </section>
+                        <div className="goButton">
                         <button type="goButton"
-                            className="btn btn-success"
+                            className="goButton"
                             onClick={() => {
-                                this.props.history.push("/trip/trips")
+                                console.log('myProps: ', this.props);
+                                var searched = this.search([    {
+                                    "name": "Nashville 1",
+                                    "city": "Nashville",
+                                    "street": "123 South down st.",
+                                    "zipcode": "37011",
+                                    "state": "TN",
+                                    "date": "",
+                                    "id": 1001,
+                                    "price": "under $200"
+                                  }]);
+                                console.log('searched!: ', searched);
+                                // this.props.history.push("/trip/tripSearchList")
                             }
                             }>Go </button>
+                            </div>
+                </div>
                 </div>
 
             
@@ -69,3 +93,8 @@ export default class TripParametersPage extends Component {
         )
     }
 }
+
+
+// I have hardcoded a single element array to my search function on line #71 I need to figure out how to pass the trips from the props
+// I added the search logic, but I need to search google for 'search elements in array'
+// Then display the searchedArray like I did in the tripSearchList (searchedArray ** searchedArray.map(element)=> blah blah )

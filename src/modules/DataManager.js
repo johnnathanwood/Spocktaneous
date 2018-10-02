@@ -39,7 +39,6 @@ export default Object.create(null, {
                 body: JSON.stringify(item)
             })
             .then(result => {
-                // console.log('result', result);
                 return result.json()
             })
         }
@@ -56,6 +55,7 @@ export default Object.create(null, {
                 body: JSON.stringify(item)
             })
             .then(result => result.json())
+        
         }
     }
 })

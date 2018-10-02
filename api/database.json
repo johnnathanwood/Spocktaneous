@@ -81,16 +81,6 @@
   ],
   "trips": [
     {
-      "name": "Nashville 1",
-      "city": "Nashville",
-      "street": "123 South down st.",
-      "zipcode": "37011",
-      "state": "TN",
-      "date": "",
-      "id": 1001,
-      "price": "under $200"
-    },
-    {
       "name": "Nashville 2",
       "city": "Nashville",
       "street": "123 South down st.",
@@ -192,190 +182,25 @@
     },
     {
       "name": "TEST",
-      "city": "",
-      "street": "303 Skyline Dr.",
+      "city": "Nashville ",
+      "street": "15124 Fort Campbell BLVD Unit 172",
       "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T16:00:39.806Z",
-      "price": "under200",
+      "state": "Kentucky (KY)",
+      "date": "2018-10-02T18:33:28.247Z",
+      "price": "",
       "userId": 3,
       "id": 1002
     },
     {
-      "name": "TEST",
+      "name": "John Wood",
       "city": "White House",
       "street": "303 Skyline Dr.",
       "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T16:02:05.565Z",
-      "price": "under100",
+      "state": "Tennessee",
+      "date": "2018-10-02T18:34:58.058Z",
+      "price": "",
       "userId": 3,
       "id": 1003
-    },
-    {
-      "name": "TEST V2",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T16:03:28.673Z",
-      "price": "under50",
-      "userId": 3,
-      "id": 1004
-    },
-    {
-      "name": "TEST V3",
-      "city": "White House",
-      "street": "",
-      "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T16:04:59.398Z",
-      "price": "",
-      "userId": 3,
-      "id": 1005
-    },
-    {
-      "name": "TEST V4",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T16:07:53.145Z",
-      "price": "",
-      "userId": 3,
-      "id": 1006
-    },
-    {
-      "name": "TEST V5",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:09:29.704Z",
-      "price": "",
-      "userId": 3,
-      "id": 1007
-    },
-    {
-      "name": "TEST V6.2",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T18:19:37.984Z",
-      "price": "under100",
-      "userId": 3,
-      "id": 1008
-    },
-    {
-      "name": "TEST V7",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:12:12.072Z",
-      "price": "under $100",
-      "userId": 3,
-      "id": 1009
-    },
-    {
-      "name": "TEST",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:14:48.048Z",
-      "price": "Under $100",
-      "userId": 3,
-      "id": 1010
-    },
-    {
-      "name": "TEST 10",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:20:19.655Z",
-      "price": "Under $100",
-      "userId": 3,
-      "id": 1011
-    },
-    {
-      "name": "Test 11",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:20:57.701Z",
-      "price": "",
-      "userId": 3,
-      "id": 1012
-    },
-    {
-      "name": "TEST V12",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:23:08.915Z",
-      "price": "Under $200",
-      "userId": 3,
-      "id": 1013
-    },
-    {
-      "name": "TEST 20",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:26:26.347Z",
-      "price": "Under $100",
-      "userId": 3,
-      "id": 1014
-    },
-    {
-      "name": "TEST V50",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:32:40.465Z",
-      "price": "Under $50",
-      "userId": 3,
-      "id": 1015
-    },
-    {
-      "name": "TEST 100",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:35:32.400Z",
-      "price": "Under $200",
-      "userId": 3,
-      "id": 1016
-    },
-    {
-      "name": "TEST 555",
-      "city": "White House",
-      "street": "303 Skyline Dr.",
-      "zipcode": "",
-      "state": "Tennessee",
-      "date": "2018-09-19T16:36:44.897Z",
-      "price": "Under $200",
-      "userId": 3,
-      "id": 1017
-    },
-    {
-      "name": "",
-      "city": "",
-      "street": "",
-      "zipcode": "",
-      "state": "",
-      "date": "2018-09-19T18:19:15.844Z",
-      "price": "",
-      "userId": 3,
-      "id": 1018
     }
   ]
 }

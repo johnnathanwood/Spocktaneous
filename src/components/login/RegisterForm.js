@@ -49,7 +49,7 @@ export default class Register extends Component {
 
 
         return (
-            <div className="forms">
+            <div className="homeButtons">
                 <div className="registerForm">
                     <form onSubmit={this.handleRegister}>
                         <h1 className="h3 mb-3 font-weight-normal">Create Spocktaneous Account</h1>
@@ -74,9 +74,11 @@ export default class Register extends Component {
                             id="userPassword"
                             placeholder="Password"
                             required="" />
+                        <div class="clearfix">
                         <button type="submit" onClick={this.handleButtonClick} className="btn btn-primary">
                             Register
                         </button>
+                        </div>
                     </form>
                 </div>
             </div>
