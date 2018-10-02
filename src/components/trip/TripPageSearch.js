@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "../trip/search.css"
+import "../trip/trip.css"
 
 export default class TripPageSearch extends Component {
 
@@ -15,27 +16,27 @@ export default class TripPageSearch extends Component {
                 <h1>Lets Start Looking</h1>
                 </div>
                 
-                    <div className="searchTripButton">
+                    <div>
                         <button type="button"
-                            className="btn btn-success"
+                            className="searchTripButton"
                             onClick={() => {
                                 this.props.history.push("/trip/parameters")
                             }
                             }>Search Ideas</button>
                     </div>
-                    <div className="createTripButton">
+                    <div>
                         <button type="button"
-                            className="btn btn-success"
+                            className="createTripButton"
                             onClick={() => {
                                 this.props.history.push("/trip/new")
                             }
                             }>Create Trip</button>
                     </div>
-                    <div className="manageTripButton">
+                    <div>
                         <button type="button"
-                            className="btn btn-success"
+                            className="manageTripButton"
                             onClick={() => {
-                                this.props.history.push("/trip/edit")
+                                this.props.history.push("/trip/manage")
                             }
                             }>Manage Trips </button>
                     </div>

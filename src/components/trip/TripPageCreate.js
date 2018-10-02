@@ -6,9 +6,6 @@ export default class TripPageCreate extends Component {
     
     
     
-    
-
-
     //set initial state here
 
 

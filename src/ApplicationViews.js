@@ -9,6 +9,10 @@ import TripParametersPage from './components/trip/TripParametersPage'
 import TripPageList from './components/trip/TripPageList'
 import TripPageCreate from './components/trip/TripPageCreate'
 import TripPageEdit from './components/trip/TripPageEdit'
+import TripSearchList from './components/trip/TripSearchList'
+import TripManagePage from './components/trip/TripManagePage'
+
+
 
 export default class ApplicationViews extends Component {
 
@@ -69,6 +73,13 @@ export default class ApplicationViews extends Component {
     trips: trips
   }))
 
+  filterTrip = (id, trips) => DataManager.filter("trips", id, trips)
+  .then(() => DataManager.getAll("trips"))
+  .then(trips => this.setState({
+    trips: trips
+  }))
+
+
     componentDidMount() {
 
         const newState = {}
@@ -87,9 +98,9 @@ export default class ApplicationViews extends Component {
         return (
             <React.Fragment>
             <Route exact path="/trip/search" component={TripPageSearch}/>
-            <Route exact path="/trip/parameters" component={TripParametersPage}/>
             <Route exact path="/home" component={HomePage} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/manage" component={TripManagePage} />
             <Route exact path="/register" render={(props) => {
               return <Register {...props}
                 addUser={this.addUser}
@@ -103,16 +114,44 @@ export default class ApplicationViews extends Component {
               users={this.state.users}
               editTrip={this.editTrip}
               deleteTrip={this.deleteTrip}
-              trip={this.state.trips} />
+              trip={this.state.trips} 
+              addTrip={this.addTrip}/>
           } else {
             return <Redirect to="/" />
           }
         }} />
+                  <Route exact path="/trip/parameters" render={(props) => {
+              return <TripParametersPage {...props}
+                trip={this.state.trips} 
+                />
+            }} />
         <Route exact path="/trip/new" render={(props) => {
           if (this.isAuthenticated()) {
             return <TripPageCreate {...props}
+              addTrip={this.addTrip}
               trips={this.state.trips}
-              addTrip={this.addTrip} />
+              
+               />
+          } else {
+            return <Redirect to="/" />
+          }
+        }} />
+        <Route exact path="/trip/tripSearchList" render={(props) => {
+          if (this.isAuthenticated()) {
+            console.log('MYPROPS: ', props);
+            return <TripSearchList {...props}
+              trips={this.state.trips}
+               />
+          } else {
+            return <Redirect to="/" />
+          }
+        }} />
+        <Route exact path="/trip/manage" render={(props) => {
+          if (this.isAuthenticated()) {
+            console.log('MYPROPS: ', props);
+            return <TripManagePage {...props}
+              trips={this.state.trips}
+               />
           } else {
             return <Redirect to="/" />
           }

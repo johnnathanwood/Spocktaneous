@@ -21,7 +21,6 @@ componentDidMount() {
 }
 constructNewTrip = evt => {
     evt.preventDefault()
-    const credentials = JSON.parse(localStorage.getItem('credentials'))
     let newTrip = {
         // id: this.state.id,
         name: this.state.name,
