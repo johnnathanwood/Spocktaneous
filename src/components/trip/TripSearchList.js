@@ -13,7 +13,7 @@ export default class TripParametersPage extends Component {
         var searched = this.search(this.props.trips);
         console.log("Searched: ", searched);
         return(
-            <div> TRIPS</div>
+            <div>TRIPS</div>
         )
     }
 }

@@ -45,8 +45,8 @@ export default Object.create(null, {
     },
     edit: {
         value: (resource, id, item) => {
-            // console.log(item, "item")
-            // console.log(`${remoteURL}/${resource}/${id}`)
+            console.log(item, "item")
+            console.log(`${remoteURL}/${resource}/${id}`)
             return fetch(`${remoteURL}/${resource}/${id}`, {
                 method: "PATCH",
                 headers: {
