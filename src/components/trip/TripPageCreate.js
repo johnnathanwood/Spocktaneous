@@ -71,7 +71,7 @@ export default class TripPageCreate extends Component {
                             <label htmlFor="price">Budget</label>
                             <p></p>
                              
-                            <select type="text" required="true"
+                            <select type="text" required={true}
                                 className="form-control"
                                 onChange={this.handleFieldChange}
                                 id="price"
